@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cronômetro Pomodoro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+
+
+  
+  <div class="pag1" id="pag1">
+    <p class="titu">Pomodoro</p>
+    <div class="container"> 
+  
+    <div class="buts1">
+   <div>
+     <button id="cima" onclick="mudarcima25()">
+     
+      <i class="fas fa-arrow-alt-circle-up fa-2x"></i>
+  
+     </button>
+   </div>
+  
+   <div id="espaçamentopq"></div>
+  
+   <div>
+     <button id="baixo" onclick="mudarbaixo25()">
+  
+      <i class="fas fa-arrow-alt-circle-down fa-2x"></i>
+  
+     </button>
+   </div>
+    </div>
+  
+      <div class="Traba">
+        <input type="text" id="pi" class="pi25" value="25" readonly>
+       <p id="pa" class="pa25">Trabalho</p>
+      </div>
+      
+  
+  
+      <div id="espaçamentogr"></div>
+  
+  
+  
+      <div class="buts2">
+  
+        <div>
+    
+        <button id="cima" onclick="mudarcima5()">
+        <i class="fas fa-arrow-alt-circle-up fa-2x"></i>
+      
+        </button>
+    
+      </div>
+    
+      <div id="espaçamentopq"></div>
+  
+  
+        <div>
+    
+        <button id="baixo" onclick="mudarbaixo5()">
+        <i class="fas fa-arrow-alt-circle-down fa-2x"></i>
+      
+        </button>
+    
+        </div>
+     </div>
+  
+      <div class="Pausa">
+        <input type="text" id="pi" class="pi5" value="5" readonly>
+        <p id="pa" class="pa5">Pausa</p>
+  
+      </div>
+  
+  
+  
+      <div id="espaçamentogr"></div>
+  
+  
+  
+      <div class="buts3">
+  
+        <div>
+          <button id="cima" onclick="mudarcima3()">
+            <i class="fas fa-arrow-alt-circle-up fa-2x"></i>
+          </button>
+        </div>
+  
+        <div id="espaçamentopq"></div>
+  
+  
+        <div>
+          <button id="baixo" onclick="mudarbaixo3()">
+            <i class="fas fa-arrow-alt-circle-down fa-2x"></i>
+      
+          </button>
+        </div>
+  
+      </div>
+  
+  
+  
+      <div class="Sess">
+        <input type="text" id="pi" class="pi3" value="3" readonly>
+        <p id="pa" class="pa3">Sessões</p>
+  
+      </div>
+    </div>
+    <div class="containerbut">
+      <button id="cont" onclick="proxpagina()">Continuar</button>
+  
+    </div>
+
+
+   </div>
+
+   <div class="pag2" id="pag2">
+     <div class="container2"> 
+       <h1 id="titupom">Pomodoro</h1>
+       
+         <button id="inbut" onclick="voltarpag1()">Início</button>
+         
+         
+         
+         
+        </div>
+        <div class="conttim">
+
+
+          <div id="time">
+    
+    
+            <div id="circulo">
+              <div id="circmenor">
+              <input type="text" name="inpt25" id="circval" value="25:00" readonly>
+
+            </div>
+
+          </div>
+          <div id="time2">
+
+            <p id="TrabP">Trabalho</p>
+
+            <div class="balls">
+              <div id="bolinha1" class="ball1"></div>
+              <div id="bolinha2" class="ball2"></div>
+              <div id="bolinha3" class="ball3"></div>
+            </div>
+            <button id="b1" onclick="playb1(); cronometro()";>
+              <i class="fas fa-play fa-3x" id="play"></i>
+              
+            </button>
+            <button id="b2" onclick="playb2()">
+              <i class="fa-solid fa-pause fa-3x" id="pause"></i>
+            </button>
+
+          </div>
+          </div>
+
+
+
+        </div>
+
+
+   </div>
+
+
+
+
+  <!--
+  FAZER OS BOTÃO DE CIMA BAIXO FUNCIONAR E DESBUGAR OUTROS
+  -->
+
+  <script src="https://kit.fontawesome.com/96fd3e5f0a.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/c12695f68e.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
