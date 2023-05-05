@@ -2,6 +2,64 @@ var trabalho = 25;
 var pausa = 5;
 var sessoes = 3;
 var display;
+var cronometroativo = false;
+
+function cronometropause() {
+    clearInterval(contagem);
+    clearInterval(contagemD);
+    cronometroativo = false;
+}
+
+function descanso() {
+    minutos = pausa - 1;
+    clearInterval(contagem);
+    contagemD = setInterval(function() {
+        if (segundos === 0) {
+            pausa--;
+            segundos = 60;
+        }
+        segundos--;
+        if (pausa === -1) {
+            // return; antes tinha o return aqui apenas.
+            cronometro();
+            clearInterval(contagemD);
+        }
+        var displayMinutos = (minutos < 10 ? '0' : '') + minutos.toString();
+        var displaySegundos = (segundos < 10 ? '0' : '') + segundos.toString();
+        contador.value = displayMinutos + ":" + displaySegundos;
+    }, 1000);
+    cronometroativo = true;
+
+    //css
+    document.querySelector('#circmenor').style.border = '7px solid #F2C94C';
+    const titulo =  document.querySelector('#TrabP');
+    titulo.innerHTML = "Pausa"; titulo.style.color = '#F2C94C';
+    document.querySelector('#bolinha1').style.backgroundColor ='#F2C94C';
+    
+}
+
+var contador = document.querySelector('#circval');
+
+var minutos = trabalho;
+var segundos = 0;
+function cronometro() {
+    contagem = setInterval(function() {
+        if (segundos === 0) {
+            minutos--;
+            segundos = 60;
+        }
+        segundos--;
+        if (minutos === -1) {
+            // return; antes tinha o return aqui apenas.
+            // cronometropause(); Tem que colocar dps.
+            descanso();
+        }
+        var displayMinutos = (minutos < 10 ? '0' : '') + minutos.toString();
+        var displaySegundos = (segundos < 10 ? '0' : '') + segundos.toString();
+        contador.value = displayMinutos + ":" + displaySegundos;
+    }, 1000);
+    cronometroativo = true;
+}
 
 const inputc25 = document.querySelector('.pi25')
 function mudarcima25() {
@@ -10,6 +68,7 @@ function mudarcima25() {
     inputc25.value = display
     min.value = display + ":" + "00"
     trabalho++;
+    minutos = trabalho;
 }
 
 const inputc5 = document.querySelector('.pi5')
@@ -34,6 +93,7 @@ function mudarbaixo25() {
     inputb25.value = display;
     min.value = display + ":" + "00";
     trabalho--;
+    minutos = trabalho;
 }
 
 
@@ -50,27 +110,6 @@ function mudarbaixo3() {
     inputb3.value = display;
     sessoes--;
 }
-
-var contador = document.querySelector('#circval');
-
-function cronometro() {
-    var minutos = trabalho;
-    var segundos = 0;
-    setInterval(function() {
-        if (segundos === 0) {
-            minutos--;
-            segundos = 60;
-        }
-        segundos--;
-        if (minutos === -1) {
-            return;
-        }
-        var displayMinutos = (minutos < 10 ? '0' : '') + minutos.toString();
-        var displaySegundos = (segundos < 10 ? '0' : '') + segundos.toString();
-        contador.value = displayMinutos + ":" + displaySegundos;
-    }, 1000);
-}
-
 
 
 function playb1() {
@@ -94,7 +133,9 @@ function proxpagina() {
 }
 
 function voltarpag1() {
-    document.getElementById("pag1").style.display = "inline";
-
-    document.getElementById("pag2").style.display = "none";
+     if (cronometroativo) {
+        window.alert("Desative o cronômetro para voltar ao início.")
+    } else {
+        window.location.reload();
+    }
 }
