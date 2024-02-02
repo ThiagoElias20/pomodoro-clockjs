@@ -99,10 +99,6 @@ text-align: center;
   transform: scale(.96);
 }
 
-#pag2 {
-  display: none;
-}
-
 
 .container2 {
   display: flex;
@@ -177,10 +173,21 @@ align-items: center;
 #circval {
   font-family: 'Roboto', sans-serif;
   background-color: #3C4262;
-  width: 175px;
+  width: 80px;
   border: none;
   font-size: 70px;
   color: #A3A6B5;
+  text-align: center;
+}
+
+#doispont {
+  font-family: 'Roboto', sans-serif;
+  background-color: #3C4262;
+  width: 15px;
+  border: none;
+  font-size: 70px;
+  color: #A3A6B5;
+  text-align: center;
 }
 
 #playpause {
@@ -204,22 +211,21 @@ align-items: center;
   margin-top: 50px;
 }
 
-
-#bolinha1 {
+.bolinhaon {
   background-color: #219653;
   width: 20px;
   height: 20px;
   border-radius: 50%;
 }
 
-#bolinha2 {
-  background-color: #3C4262;
+.bolinhaonPause {
+  background-color: #F2C94C;
   width: 20px;
   height: 20px;
   border-radius: 50%;
 }
 
-#bolinha3 {
+.bolinhaoff {
   background-color: #3C4262;
   width: 20px;
   height: 20px;

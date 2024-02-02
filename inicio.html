@@ -18,7 +18,7 @@
   
     <div class="buts1">
    <div>
-     <button id="cima" onclick="mudarcima25()">
+     <button class="butupdown cima but25" id="cima">
      
       <i class="fas fa-arrow-alt-circle-up fa-2x"></i>
   
@@ -28,7 +28,7 @@
    <div id="espaçamentopq"></div>
   
    <div>
-     <button id="baixo" onclick="mudarbaixo25()">
+     <button class="butupdown baixo but25" id="baixo">
   
       <i class="fas fa-arrow-alt-circle-down fa-2x"></i>
   
@@ -37,7 +37,7 @@
     </div>
   
       <div class="Traba">
-        <input type="text" id="pi" class="pi25" value="25" readonly>
+        <input type="text" id="pi" class="valortemp pi25" value="25" readonly>
        <p id="pa" class="pa25">Trabalho</p>
       </div>
       
@@ -51,7 +51,7 @@
   
         <div>
     
-        <button id="cima" onclick="mudarcima5()">
+        <button class="butupdown cima but5" id="cima">
         <i class="fas fa-arrow-alt-circle-up fa-2x"></i>
       
         </button>
@@ -63,7 +63,7 @@
   
         <div>
     
-        <button id="baixo" onclick="mudarbaixo5()">
+        <button class="butupdown baixo but5" id="baixo">
         <i class="fas fa-arrow-alt-circle-down fa-2x"></i>
       
         </button>
@@ -72,7 +72,7 @@
      </div>
   
       <div class="Pausa">
-        <input type="text" id="pi" class="pi5" value="5" readonly>
+        <input type="text" id="pi" class="valortemp pi5" value=5 readonly>
         <p id="pa" class="pa5">Pausa</p>
   
       </div>
@@ -86,7 +86,7 @@
       <div class="buts3">
   
         <div>
-          <button id="cima" onclick="mudarcima3()">
+          <button class="butupdown cima but3" id="cima">
             <i class="fas fa-arrow-alt-circle-up fa-2x"></i>
           </button>
         </div>
@@ -95,7 +95,7 @@
   
   
         <div>
-          <button id="baixo" onclick="mudarbaixo3()">
+          <button class="butupdown baixo but3" id="baixo">
             <i class="fas fa-arrow-alt-circle-down fa-2x"></i>
       
           </button>
@@ -106,77 +106,20 @@
   
   
       <div class="Sess">
-        <input type="text" id="pi" class="pi3" value="3" readonly>
+        <input type="text" id="pi" class="valortemp pi3" value="3" readonly>
         <p id="pa" class="pa3">Sessões</p>
   
       </div>
     </div>
     <div class="containerbut">
-      <button id="cont" onclick="proxpagina()">Continuar</button>
+        <button class="contbut" id="cont" onclick="contbut()">Continuar</button>
   
     </div>
 
 
    </div>
 
-   <div class="pag2" id="pag2">
-     <div class="container2"> 
-       <h1 id="titupom">Pomodoro</h1>
-       
-         <button id="inbut" onclick="voltarpag1()">Início</button>
-         
-         
-         
-         
-        </div>
-        <div class="conttim">
 
-
-          <div id="time">
-    
-    
-            <div id="circulo">
-              <div id="circmenor">
-              <input type="text" name="inpt25" id="circval" value="25:00" readonly>
-
-            </div>
-
-          </div>
-          <div id="time2">
-
-            <p id="TrabP">Trabalho</p>
-
-            <div class="balls">
-              <div id="bolinha1" class="ball1"></div>
-              <div id="bolinha2" class="ball2"></div>
-              <div id="bolinha3" class="ball3"></div>
-            </div>
-            <button id="b1" onclick="playb1(); cronometro()";>
-              <i class="fas fa-play fa-3x" id="play"></i>
-              
-            </button>
-            <button id="b2" onclick="playb2(); cronometropause()";>
-              <i class="fa-solid fa-pause fa-3x" id="pause"></i>
-            </button>
-
-          </div>
-          </div>
-
-
-
-        </div>
-
-
-   </div>
-
-
-
-
-  <!--
-  FAZER OS BOTÃO DE CIMA BAIXO FUNCIONAR E DESBUGAR OUTROS
-  -->
-
-  <script src="https://kit.fontawesome.com/96fd3e5f0a.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/c12695f68e.js" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
