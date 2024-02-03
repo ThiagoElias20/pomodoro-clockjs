@@ -9,7 +9,7 @@ escolhidas pelo usuário, quando acabar o cronômetro reinicia automáticamente 
 
 # Tela inicial ▶️
 
-![Alt Text](https://gyazo.com/3f4594c9258fa30e74828b043c2c27fc)
+![Alt Text](https://i.gyazo.com/3f4594c9258fa30e74828b043c2c27fc.gif)
 
 # Versão de dia ⏱️
 
