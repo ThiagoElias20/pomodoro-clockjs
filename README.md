@@ -11,9 +11,9 @@ escolhidas pelo usuário, quando acabar o cronômetro reinicia automáticamente 
 
 ![Alt Text](https://i.gyazo.com/3f4594c9258fa30e74828b043c2c27fc.gif)
 
-# Versão de dia ⏱️
+# Tela do Cronômetro ⏱️
 
-![Alt Text](https://gyazo.com/d1067508a0a9c9670d66ff621f574820.gif)
+![Alt Text](https://i.gyazo.com/383c8b388bed9cd93a00000c61251029.gif)
 
 # Techs usadas
 <div style="display: inline_block"><br>
