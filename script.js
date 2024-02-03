@@ -209,8 +209,6 @@ document.querySelector(".but-pause").addEventListener('click', () => {
 
     clearInterval(cronomplay);
 })
-
-
 /*==================Fim do Tempo Funcionando===============*/
 
 /*==================Botões de troca de página===============*/
